@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore upcoming events curated by Stackly. From weddings to corporate galas, find the perfect event for you.">
+  <title>Events — Stackly</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="events.html" class="active">Agents</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="mobile-login">Login</a>
+      </div>
+      <div class="nav-right">
+        <a href="login.html" class="btn-login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Login
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero">
+    <div class="container">
+     <span class="section-label"><span class="star">✦</span> EXPERT AGENTS</span>
+<h1 class="section-title">Meet Our <span>Finance & Accounting Agents</span></h1>
+<p class="section-subtitle" style="margin: 0 auto;">
+  Connect with experienced finance and accounting professionals who help businesses manage cash flow, compliance, taxation, auditing, and financial growth.
+</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span>Agents</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FILTERS ======== -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-bar glass-card">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">All Agents</button>
+<button class="filter-tab" data-filter="tax">Tax Specialists</button>
+<button class="filter-tab" data-filter="audit">Auditors</button>
+<button class="filter-tab" data-filter="bookkeeping">Bookkeepers</button>
+<button class="filter-tab" data-filter="payroll">Payroll Experts</button>
+<button class="filter-tab" data-filter="advisory">Financial Advisors</button>
+<button class="filter-tab" data-filter="compliance">Compliance Officers</button>
+        </div>
+        <div class="filter-search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="eventSearch" placeholder="Search agents...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EVENTS GRID ======== -->
+  <section class="section events-listing">
+    <div class="container">
+      <div class="events-count">
+        <p>Showing <span id="eventCount">6</span> finance agents</p>
+        <div class="sort-dropdown">
+          <select id="sortSelect">
+            <option value="date">Sort by Date</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="events-grid" id="eventsGrid">
+        <!-- Event 1 -->
+        <div class="event-card animate-on-scroll" data-category="tax">
+          <div class="event-image">
+            <img src="assets/m7.webp" alt="Royal Wedding Ceremony">
+            <div class="event-badge">Tax Specialist</div>
+            <div class="event-date-chip">
+              <span class="chip-day">15</span>
+              <span class="chip-month">DEC</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Senior Tax Consultant</h3>
+            <p class="event-desc"> Expert in corporate taxation, GST compliance, tax planning,
+      and regulatory reporting for businesses of all sizes.</p>
+            <div class="event-info">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 10+ Years Experience</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>250+ Clients Served</span>
+            </div>
+            <div class="event-footer">
+              
+              <a href="404.html" class="btn-primary btn-small">View Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card animate-on-scroll" data-category="audit">
+          <div class="event-image">
+            <img src="assets/tech-summit.webp" alt="Financial Auditor">
+            <div class="event-badge">Auditor</div>
+            <div class="event-date-chip">
+              <span class="chip-day">20</span>
+              <span class="chip-month">JAN</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Financial Auditor</h3>
+            <p class="event-desc">Expert in financial auditing, compliance, and risk assessment for businesses of all sizes.</p>
+            <div class="event-info">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 12+ Years Experience</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>300+ Audits Completed</span>
+            </div>
+            <div class="event-footer">
+              
+              <a href="404.html" class="btn-primary btn-small">View Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card animate-on-scroll" data-category="payroll">
+          <div class="event-image">
+            <img src="assets/m6.webp" alt="Payroll Specialist">
+            <div class="event-badge">Payroll</div>
+            <div class="event-date-chip">
+              <span class="chip-day">10</span>
+              <span class="chip-month">MAR</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Payroll Specialist</h3>
+            <p class="event-desc">Manages payroll processing, employee benefits, tax deductions, and salary compliance with precision.</p>
+            <div class="event-info">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 8+ Years Experience</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 500+ Employees Managed</span>
+            </div>
+            <div class="event-footer">
+             
+              <a href="404.html" class="btn-primary btn-small">View Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card animate-on-scroll" data-category="advisor">
+          <div class="event-image">
+            <img src="assets/m1.webp" alt="Financial Advisor">
+            <div class="event-badge">Advisor</div>
+            <div class="event-date-chip">
+              <span class="chip-day">14</span>
+              <span class="chip-month">FEB</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Financial Advisor</h3>
+            <p class="event-desc">Provides strategic financial planning, budgeting, investment guidance, and business growth recommendations.</p>
+            <div class="event-info">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 10+ Years Experience</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 500+ Clients Served</span>
+            </div>
+            <div class="event-footer">
+              
+              <a href="404.html" class="btn-primary btn-small">View Profile</a>
+            </div>
+          </div>
+        </div>
+         <!-- Event 5 -->
+        <div class="event-card animate-on-scroll" data-category="tax">
+          <div class="event-image">
+            <img src="assets/w3.webp" alt="Royal Wedding Ceremony">
+            <div class="event-badge">Tax Specialist</div>
+            <div class="event-date-chip">
+              <span class="chip-day">15</span>
+              <span class="chip-month">DEC</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Tax Consultant</h3>
+            <p class="event-desc"> Expert in corporate taxation, GST compliance, tax planning,
+      and regulatory reporting for businesses of all sizes.</p>
+            <div class="event-info">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 05+ Years Experience</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 150+ Clients Served</span>
+            </div>
+            <div class="event-footer">
+              
+              <a href="404.html" class="btn-primary btn-small">View Profile</a>
+            </div>
+          </div>
+        </div>
+         <!-- Event 6 -->
+        <div class="event-card animate-on-scroll" data-category="tax">
+          <div class="event-image">
+            <img src="assets/m7.webp" alt="Royal Wedding Ceremony">
+            <div class="event-badge">Bookkeepers</div>
+            <div class="event-date-chip">
+              <span class="chip-day">15</span>
+              <span class="chip-month">DEC</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Bookkeepers</h3>
+            <p class="event-desc">Maintain accurate financial records, track transactions, and generate monthly reports for informed business decisions.
+</p>
+            <div class="event-info">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 10+ Years Experience</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>250+ Clients Served</span>
+            </div>
+            <div class="event-footer">
+              
+              <a href="404.html" class="btn-primary btn-small">View Profile</a>
+            </div>
+          </div>
+        </div>
+
+
+        
+
+        
+
+        
+
+       
+
+      </div>
+
+      <!-- ======== UPCOMING HIGHLIGHTS ======== -->
+  <section class="section highlights-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span>FEATURED SERVICES</span>
+        <h2 class="section-title">Finance & Accounting <span>Solutions</span></h2>
+        <p class="section-subtitle"> Discover specialized services delivered by our expert financial professionals.</p>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-card animate-on-scroll">
+          <div class="highlight-date">Premium</div>
+          <h3>Tax Planning & Compliance</h3>
+          <p>An evening of elegance featuring live orchestral performances, gourmet dining, and sunset views. Limited to 200 VIP guests.</p>
+          <div class="highlight-badges">
+            <span class="badge">VIP</span>
+            <span class="badge">Limited</span>
+          </div>
+        </div>
+        <div class="highlight-card animate-on-scroll">
+          <div class="highlight-date">Business</div>
+          <h3>Financial Reporting</h3>
+          <p>Accurate financial statements, balance sheets, and reporting solutions for informed decision-making.</p>
+          <div class="highlight-badges">
+            <span class="badge">Networking</span>
+            <span class="badge">Tech</span>
+          </div>
+        </div>
+        <div class="highlight-card animate-on-scroll">
+          <div class="highlight-date">Growth</div>
+          <h3>Cash Flow Management</h3>
+          <p>Improve liquidity, optimize working capital, and strengthen long-term financial performance.</p>
+          <div class="highlight-badges">
+            <span class="badge">Charity</span>
+            <span class="badge">Formal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EVENT CATEGORIES ======== -->
+  <section class="section categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> SPECIALIZATIONS</span>
+        <h2 class="section-title">Find Your Perfect <span>Financial Expert</span></h2>
+        <p class="section-subtitle">Browse professionals by their area of expertise.</p>
+      </div>
+      <div class="categories-showcase">
+        <div class="category-box animate-on-scroll">
+          <div class="category-icon">📊</div>
+          <h4>Financial Planning</h4>
+          <p>78 Experts</p>
+        </div>
+        <div class="category-box animate-on-scroll">
+          <div class="category-icon">🧾</div>
+          <h4>Financial Reports</h4>
+          <p>65 Experts</p>
+        </div>
+        <div class="category-box animate-on-scroll">
+          <div class="category-icon">📚</div>
+          <h4>Cash Management</h4>
+          <p>42 Experts</p>
+        </div>
+        <div class="category-box animate-on-scroll">
+          <div class="category-icon">💰</div>
+          <h4>Payroll</h4>
+          <p>93 Experts</p>
+        </div>
+        <div class="category-box animate-on-scroll">
+          <div class="category-icon">🔍</div>
+          <h4>Auditing</h4>
+          <p>24 Experts</p>
+        </div>
+        <div class="category-box animate-on-scroll">
+          <div class="category-icon">⚖️</div>
+          <h4>Compliance</h4>
+          <p>56 Experts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SEARCH TIPS ======== -->
+  <section class="section search-tips-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> OUR PROCESS</span>
+        <h2 class="section-title">How Our <span>Agents Help You</span></h2>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card animate-on-scroll">
+          <div class="tip-number">01</div>
+          <h4>Assess Financial Needs</h4>
+          <p>Our experts evaluate your business goals and financial requirements.</p>
+        </div>
+        <div class="tip-card animate-on-scroll">
+          <div class="tip-number">02</div>
+          <h4>Create Financial Strategy</h4>
+          <p>Receive customized plans for accounting, taxation, and growth.</p>
+        </div>
+        <div class="tip-card animate-on-scroll">
+          <div class="tip-number">03</div>
+          <h4>Ensure Compliance</h4>
+          <p>Stay compliant with regulations through proactive monitoring.</p>
+        </div>
+        <div class="tip-card animate-on-scroll">
+          <div class="tip-number">04</div>
+          <h4>Support Business Growth</h4>
+          <p>Leverage financial insights to improve profitability and scalability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== NEWSLETTER ======== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card glass-card">
+        <div class="newsletter-content">
+          <h3>Stay Updated on Financial Insights</h3>
+          <p>Subscribe to receive accounting updates, tax regulations,
+           financial tips, and industry news.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img"></a>
+          <p>Professional finance and accounting solutions helping businesses
+            achieve financial clarity, compliance, and sustainable growth.</p>
+          <div class="footer-socials">
+            <a href="404.html" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="404.html" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            <a href="404.html" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="404.html" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Agents</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="404.html">Tax Planning</a></li>
+            <li><a href="404.html">Audit Services</a></li>
+            <li><a href="404.html">Bookkeeping</a></li>
+            <li><a href="404.html">Payroll Management</a></li>
+            <li><a href="404.html">Financial Advisory</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>hello@stackly.com</li>
+            <li>+91 98765 43210</li>
+            <li>Salem, Tamil Nadu</li>
+            <li>Mon - Fri: 9AM - 6PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Category filtering
+      const tabs = document.querySelectorAll('.filter-tab');
+      const cards = document.querySelectorAll('.event-card');
+      const countEl = document.getElementById('eventCount');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const filter = tab.dataset.filter;
+          let visibleCount = 0;
+
+          cards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.style.display = '';
+              card.style.animation = 'fadeInUp 0.4s ease forwards';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (countEl) countEl.textContent = visibleCount;
+        });
+      });
+
+      // Search
+      const searchInput = document.getElementById('eventSearch');
+      if (searchInput) {
+        searchInput.addEventListener('input', debounce((e) => {
+          const query = e.target.value.toLowerCase();
+          let visibleCount = 0;
+
+          cards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (text.includes(query)) {
+              card.style.display = '';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (countEl) countEl.textContent = visibleCount;
+        }, 300));
+      }
+
+      // Newsletter
+      document.getElementById('newsletterForm')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.location.href = '404.html';
+      });
+    });
+  </script>
+</body>
+</html>

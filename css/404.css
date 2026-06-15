@@ -1,0 +1,149 @@
+/* ========================================
+   STACKLY - Modern 404 Page
+   ======================================== */
+
+.error-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #0f172a;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.error-container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+}
+
+.error-visuals {
+    position: relative;
+}
+
+.glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(
+        circle,
+        rgba(6,182,212,0.25) 0%,
+        transparent 70%
+    );
+    z-index: -1;
+    animation: pulseGlow 4s infinite alternate;
+}
+
+.error-code {
+    font-size: clamp(120px, 18vw, 240px);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #06b6d4
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+.error-text {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.error-text h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.error-text p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #06b6d4
+    );
+
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(6,182,212,0.3);
+}
+
+/* Animations */
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        opacity: .5;
+        transform: translate(-50%, -50%) scale(.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+    .glow-bg {
+        width: 380px;
+        height: 380px;
+    }
+}
+
+@media (max-width:480px) {
+    .glow-bg {
+        width: 280px;
+        height: 280px;
+    }
+
+    .error-text p {
+        font-size: 14px;
+    }
+}
