@@ -63,7 +63,7 @@
               <label for="fullname">Full Name</label>
               <div class="input-with-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" oninput="this.value=this.value.replace(/[^A-Za-z\s]/g, '')">
               </div>
             </div>
 
@@ -172,8 +172,9 @@
         let isValid = true;
         
         // Validate full name
-        if (fullname.value.trim().length < 3) {
-          showFieldError(fullname.parentElement, 'Name must be at least 3 characters');
+        const validName = /^[A-Za-z\s]+$/;
+        if (fullname.value.trim().length < 3 || !validName.test(fullname.value.trim())) {
+          showFieldError(fullname.parentElement, 'Name must be at least 3 letters and contain only letters and spaces');
           isValid = false;
         } else {
           clearFieldError(fullname.parentElement);
